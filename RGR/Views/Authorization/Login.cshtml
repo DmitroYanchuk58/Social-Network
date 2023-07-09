@@ -1,0 +1,47 @@
+﻿@model Account
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/log.css">
+    <title>Login</title>
+    <link href="~/css/login.css" asp-append-version="true" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cardo:ital,wght@0,400;0,700;1,400&family=Montserrat+Subrayada:wght@400;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cardo:ital,wght@0,400;0,700;1,400&family=Montserrat+Subrayada:wght@400;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet" />
+</head>
+<body>
+    <!--Login block-->
+    <div class="logBlock">
+        <!--Reg and Log btn-->
+        <div class="RegLog">
+            <form asp-action="Registration" asp-controller="Authorization" method="get">
+            <button class="regBtn">Registration</button>
+            </form>
+            <button class="logBtn">Login</button>
+        </div>
+        <!--Inputs block-->
+        <div asp-validation-summary="ModelOnly"></div>
+        <form asp-action="Login" asp-controller="Authorization" method="post">
+        <label class="lEmail">Enter your email</label>
+        <input class="iEmail" type="text" name="Email">
+        <span asp-validation-for="Email" class="errorEmail"></span>
+        <label class="lPassword">Enter your password</label>
+        <input class="iPassword" type="password" name="Password">
+        <span asp-validation-for="Password" class="errorPassword"></span>
+        <!--Links block-->
+        <a class="aForgot" href="#">I forgot my password</a>
+        <!--Buttons block-->
+            <input class="rdBtn" type="checkbox" name="Cookies" value="true" />
+        <label class="lRdBtn" for="option">Remember me</label>
+        <button class="login">Login</button>
+        </form>
+    </div>
+</body>
+</html>

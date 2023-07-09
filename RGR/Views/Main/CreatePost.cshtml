@@ -1,0 +1,106 @@
+﻿@model Account
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Post</title>
+    <link rel="stylesheet" href="~/css/EditPost.css" asp-append-version="true"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cardo:ital,wght@0,400;0,700;1,400&family=Montserrat+Subrayada:wght@400;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet" />
+</head>
+<body>
+    <!--Upper block-->
+    <div class="upperBlock">
+        <!-- Logo -->
+        <div class="logoBlock">
+            <img src="images/Logo.png" alt="logo" class="logo" />
+            <label class="lLogo">Social Network</label>
+        </div>
+
+        <!--Buttons-->
+        <div class="buttonsBlock">
+            <button>My account</button><button>All posts</button><button>All accounts</button>
+        </div>
+    </div>
+
+    <!--Posts block-->
+    <div class="postsBlock">
+        <div class="upperPostsBlock">
+            <label>Posts</label>
+        </div>
+        <!--Posts-->
+        <div class="posts">
+            @foreach (Post post in Model.Posts)
+            {
+                <!--Post-->
+                <div class="post">
+
+                    <!--Author-->
+                    <div class="postAccountBlock">
+                        <div class="postAccountImage">
+                            @if (post.IdAccountNavigation.Avatarka != null && post.IdAccountNavigation.Avatarka.Length > 0)
+                            {
+                                <img src="data:image/jpeg;base64,@Convert.ToBase64String(post.IdAccountNavigation.Avatarka)" alt="avatarka">
+                            }
+                        </div>
+                        <div class="postAccountName">
+                            <label>@post.IdAccountNavigation.Nickname</label>
+                        </div>
+                        <div class="postAccountTime">
+                            <label>@post.Time</label>
+                        </div>
+                        <!--More menu-->
+                        <img src="~/images/more.png" alt="more" class="more">
+                    </div>
+
+                    <!--Post data-->
+                    <div class="restPost">
+                        <div class="postDesc">
+                            <label>@post.Description</label>
+                        </div>
+                        <div class="postImage">
+                            @if (post.Image != null && post.Image.Length > 0)
+                            {
+                                <img src="data:image/jpeg;base64,@Convert.ToBase64String(post.Image)" alt="Mountains">
+                            }
+                        </div>
+                    </div>
+
+                </div>
+            }
+            </div>
+    </div>
+
+    <!--Create Post-->
+    <div class="createPostBackgroundBlock">
+        <div class="createPostBlock">
+
+            <!--Account block-->
+            <div class="createPostAccountBlock">
+                <div class="createPostAccountName">
+                    <label>@Model.Nickname</label>
+                </div>
+            </div>
+
+            <form asp-action="CreatePost" asp-asp-controller="Main" method="post" enctype="multipart/form-data">
+            <!--Inputs block-->
+            <div class="createPostInputsBlock">
+                <label class="createPostDescLabel">Enter your description</label>
+                <textarea class="createPostDesc" name="description"></textarea>
+                <input name="photo" type="file" class="createPostImage">
+            </div>
+            <button class="createPost">Create post</button>
+            </form>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
+
+

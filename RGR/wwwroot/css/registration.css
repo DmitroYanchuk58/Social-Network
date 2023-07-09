@@ -1,0 +1,202 @@
+body {
+    background: #FFFFFF;
+}
+
+/* Registration block */
+
+.regBlock {
+    height: 80%;
+    width: 30%;
+    position: absolute;
+    background: #F1EDEA;
+    left: 35%;
+    top: 10%;
+    border-radius: 5%;
+}
+
+/* Registration and Login buttons */
+
+.RegLog {
+    position: absolute;
+    left: 20%;
+    top: 2%;
+    width: 60%;
+    height: 5%;
+    border-radius: 20%;
+}
+
+.regBtn {
+    width: 50%;
+    height: 100%;
+    border-radius: 20% 0 0 20%;
+    border-style: none;
+    background: #335B6B;
+    color: white;
+    font-size: 150%;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+
+.logBtn {
+    width: 50%;
+    height: 100%;
+    border-style: none;
+    border-radius: 0 20% 20% 0;
+    background: #274C5B;
+    color: white;
+    position: absolute;
+    right: 0;
+    top:0;
+    font-size: 150%;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Inputs block */
+
+.lNickname {
+    font-size: 240%;
+    position: absolute;
+    top: 11%;
+    left: 20%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: extra-bold;
+    color: #274C5B;
+}
+
+.iNickname {
+    width: 76%;
+    height: 5%;
+    position: absolute;
+    top: 17%;
+    left: 12%;
+    font-size: 200%;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.errorNickname{
+    position:absolute;
+    top:23%;
+    font-size:150%;
+    color:red;
+    left:12%;
+}
+
+.lEmail {
+    font-size: 240%;
+    position: absolute;
+    top: 27%;
+    left: 27%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: extra-bold;
+    color: #274C5B;
+}
+
+.iEmail {
+    width: 76%;
+    height: 5%;
+    position: absolute;
+    top: 33%;
+    left: 12%;
+    font-size: 200%;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.errorEmail {
+    position: absolute;
+    top: 39%;
+    font-size: 150%;
+    color: red;
+    left: 12%;
+}
+
+.lPassword {
+    font-size: 240%;
+    position: absolute;
+    top: 44%;
+    left: 22%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: extra-bold;
+    color: #274C5B;
+}
+
+.iPassword {
+    width: 76%;
+    height: 5%;
+    position: absolute;
+    top: 50%;
+    left: 12%;
+    font-size: 200%;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.errorPassword {
+    position: absolute;
+    top: 56%;
+    font-size: 150%;
+    color: red;
+    left: 12%;
+}
+
+.lPassword2 {
+    font-size: 240%;
+    position: absolute;
+    top: 61%;
+    left: 11.5%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: extra-bold;
+    color: #274C5B;
+}
+
+.iPassword2 {
+    width: 76%;
+    height: 5%;
+    position: absolute;
+    top: 67%;
+    left: 12%;
+    font-size: 200%;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.errorPassword2 {
+    position: absolute;
+    top: 73%;
+    font-size: 150%;
+    color: red;
+    left: 12%;
+}
+
+.rdBtn {
+    height: 4%;
+    width: 4%;
+    position: absolute;
+    top: 77%;
+    left: 15%;
+}
+
+.lRdBtn {
+    position: absolute;
+    top: 77%;
+    left: 22%;
+    font-size: 200%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: extra-bold;
+    color: #274C5B;
+}
+
+/*Registration button*/
+.registration {
+    width: 70%;
+    height: 10%;
+    position: absolute;
+    bottom: 5%;
+    left: 15%;
+    border: 3px solid #EFD372;
+    border-radius: 10% 10% 10% 10%;
+    font-size: 300%;
+    font-family: 'Roboto', sans-serif;
+    color: #274C5B;
+}

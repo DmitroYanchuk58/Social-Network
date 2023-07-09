@@ -1,0 +1,71 @@
+﻿@model Account
+ <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Registration</title>
+        <link href="~/css/registration.css" asp-append-version="true" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cardo:ital,wght@0,400;0,700;1,400&family=Montserrat+Subrayada:wght@400;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+              rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cardo:ital,wght@0,400;0,700;1,400&family=Montserrat+Subrayada:wght@400;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+              rel="stylesheet" />
+    </head>
+    <body>
+        <!--Registration block-->
+        <div class="regBlock">
+            <!--Reg and Log btn-->
+            <div class="RegLog">
+                <button class="regBtn">Registration</button>
+                 <form asp-action="Login" asp-controller="Authorization" method="get">
+                <button class="logBtn">Login</button>
+                </form>
+            </div>
+
+            <!--Inputs block-->
+            <div asp-validation-summary="ModelOnly"></div>
+            <form asp-action="Registration" asp-controller="Authorization" method="post">
+            <label class="lNickname">Enter your nickname</label>
+            <input type="text" class="iNickname" name="Nickname" asp-for="Nickname"/>
+            <span asp-validation-for="Nickname" class="errorNickname"></span>
+            <label class="lEmail">Enter your email</label>
+            <input class="iEmail" type="email" name="Email" asp-for="Email"/>
+            <span asp-validation-for="Email" class="errorEmail"></span>
+            <label class="lPassword">Enter your password</label>
+            <input class="iPassword" type="password" name="Password" asp-for="Password"/>
+            <span asp-validation-for="Password" class="errorPassword"></span>
+            <label class="lPassword2">Enter your password again</label>
+            <input class="iPassword2" type="password" asp-for="Password"/>
+            <span asp-validation-for="Password" class="errorPassword2"></span>
+            <input class="rdBtn" type="radio" id="privacy" onchange="checkRegistrationButton()" />
+            <label class="lRdBtn" for="privacy">I accept the privacy policy</label>
+            <button class="registration" id="registrationButton" disabled>Registration</button>
+        </form>
+        </div>
+
+        <!--JS scripts-->
+    <script> 
+         //Privacy policy and same passwords script
+                    function checkRegistrationButton() {
+                        var privacyCheckbox = document.getElementById("privacy");
+                        var registrationButton = document.getElementById("registrationButton");
+                        var passwordInput = document.querySelector('.iPassword');
+                        var confirmPasswordInput = document.querySelector('.iPassword2');
+
+                        if (privacyCheckbox.checked && passwordInput.value === confirmPasswordInput.value) {
+                            registrationButton.disabled = false; // Разблокируем кнопку регистрации
+                        } else {
+                            registrationButton.disabled = true; // Блокируем кнопку регистрации
+                        }
+                    }
+                var passwordInput = document.querySelector('.iPassword');
+                var confirmPasswordInput = document.querySelector('.iPassword2');
+                passwordInput.addEventListener('input', checkRegistrationButton);
+                confirmPasswordInput.addEventListener('input', checkRegistrationButton);
+    </script>
+    </body>
+</html>

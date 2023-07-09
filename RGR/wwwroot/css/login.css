@@ -1,0 +1,158 @@
+body {
+    background: #FFFFFF;
+}
+/* Login block */
+
+.logBlock {
+    height: 70%;
+    width: 30%;
+    position: absolute;
+    background: #F1EDEA;
+    left: 35%;
+    top: 15%;
+    border-radius: 5%;
+}
+
+/* Registration and Login buttons */
+
+.RegLog {
+    position: absolute;
+    left: 20%;
+    top: 2%;
+    width: 60%;
+    height: 7%;
+    border-radius: 20%;
+}
+
+.regBtn {
+    width: 60%;
+    height: 100%;
+    border-radius: 20% 0 0 20%;
+    border-style: none;
+    background: #335B6B;
+    color: white;
+    font-size: 150%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.logBtn {
+    width: 50%;
+    height: 59.6%;
+    border-style: none;
+    border-radius: 0 20% 20% 0;
+    background: #274C5B;
+    color: white;
+    position: absolute;
+    top:0;
+    right: 0;
+    font-size: 150%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+/* Inputs block */
+.lEmail {
+    font-size: 240%;
+    position: absolute;
+    top: 15%;
+    left: 26%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: extra-bold;
+    color: #274C5B;
+}
+
+.iEmail {
+    width: 76%;
+    height: 5%;
+    position: absolute;
+    top: 22%;
+    left: 12%;
+    font-size: 200%;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+.errorEmail {
+    position: absolute;
+    top: 29%;
+    font-size: 150%;
+    color: red;
+    left: 12%;
+}
+
+.lPassword {
+    font-size: 240%;
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: extra-bold;
+    color: #274C5B;
+}
+
+.iPassword {
+    width: 76%;
+    height: 5%;
+    position: absolute;
+    top: 47%;
+    left: 12%;
+    font-size: 200%;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+.errorPassword {
+    position: absolute;
+    top: 54%;
+    font-size: 150%;
+    color: red;
+    left: 12%;
+}
+
+/* Links */
+
+.aForgot {
+    width: 76%;
+    height: 5%;
+    position: absolute;
+    bottom: 6%;
+    left: 12%;
+    font-size: 200%;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    color: #274C5B;
+}
+
+/* Buttons */
+.rdBtn {
+    width: 4%;
+    height: 4%;
+    position: absolute;
+    top: 70.5%;
+    left: 26%;
+}
+
+.lRdBtn {
+    width: 76%;
+    height: 5%;
+    position: absolute;
+    top: 70%;
+    left: 32%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 240%;
+    font-weight: extra-bold;
+    text-decoration: none;
+    color: #274C5B;
+}
+
+.login {
+    width: 70%;
+    height: 10%;
+    position: absolute;
+    bottom: 12.5%;
+    left: 15%;
+    border: 3px solid #EFD372;
+    border-radius: 10% 10% 10% 10%;
+    font-size: 300%;
+    font-family: 'Roboto', sans-serif;
+    color: #274C5B;
+}

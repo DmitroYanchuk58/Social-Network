@@ -1,0 +1,145 @@
+body {
+  background: #ffffff;
+}
+
+/* Upper block */
+
+.upperBlock {
+  height: 7%;
+  width: 100%;
+  background: #335b6b;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Logo */
+.logoBlock {
+  background: #f2f3f4;
+  position: absolute;
+  top: 0;
+  left: 4%;
+  height: 100%;
+  width: 12%;
+}
+.logo {
+  height: 100%;
+  position: absolute;
+  left: 3%;
+}
+.lLogo {
+  left: 42%;
+  font-size: 200%;
+  font-family: "Open Sans", sans-serif;
+  position: absolute;
+  top: 5%;
+}
+
+/* Upper block buttons */
+.buttonsBlock {
+    width: 20%;
+    height: 40%;
+    position: absolute;
+    right: 5%;
+    bottom: 0;
+    background: #335b6b;
+    display: flex;
+}
+
+    .buttonsBlock button {
+        background: #335b6b;
+        width: 33%;
+        height: 100%;
+        border-style: none;
+        color: white;
+        font-size: 130%;
+        font-family: "Roboto", sans-serif;
+        white-space: nowrap;
+    }
+
+    .buttonsBlock form {
+        width: 33%;
+        height: 100%;
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+        border-top: 1px solid black;
+    }
+/*Accounts block*/
+.accountsBlock{
+    width:98%;
+    height:90%;
+    position:absolute;
+    bottom:0;
+    left:1%;
+    background:black;
+    background: #d4d4d4;
+}
+/*Account*/
+.accountBlock {
+    width: 100%;
+    height: 10%;
+    border-bottom: 1px solid black;
+    background: #d4d4d4;
+}
+.accountImage{
+    margin-left:2%;
+    width:7%;
+    height:100%;
+}
+.accountImage img{
+    width:100%;
+    height:100%;
+    border-radius:50%;
+}
+.accountName {
+    width: 30%;
+    height: 50%;
+    margin-left: 17%;
+    margin-top: -5.2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+}
+.accountName label{
+    font-size: 200%;
+    margin-right:90%;
+  font-family: "Roboto", sans-serif;
+  color: black;
+}
+.accountDesc{
+    width:50%;
+    height:50%;
+    margin-left:15%;
+    overflow: hidden;
+    display: flex; 
+}
+.accountDesc label{
+    font-size: 150%;
+  font-family: "Roboto", sans-serif;
+  color: black;
+}
+.accountPosts{
+    width:5%;
+    height:80%;
+    margin-left:90%;
+    margin-top:-4.7%;
+    border:1px solid black;
+    overflow: hidden;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+.accountPostsLabel{
+    font-size:250%;
+  font-family: "Roboto", sans-serif;
+  color: black;
+  margin-top:-10%;
+}
+.accountPostsLabel2{
+    font-size: 150%;
+  font-family: "Roboto", sans-serif;
+  color: black;
+  margin-top:60%;
+  margin-left:-50%;
+}

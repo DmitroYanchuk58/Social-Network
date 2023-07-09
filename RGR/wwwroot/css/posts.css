@@ -1,0 +1,192 @@
+﻿body {
+    background: #ffffff;
+}
+
+/* Upper block */
+
+.upperBlock {
+    height: 7%;
+    width: 100%;
+    background: #335b6b;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Logo */
+.logoBlock {
+    background: #f2f3f4;
+    position: absolute;
+    top: 0;
+    left: 4%;
+    height: 100%;
+    width: 12%;
+}
+
+.logo {
+    height: 100%;
+    position: absolute;
+    left: 3%;
+}
+
+.lLogo {
+    left: 42%;
+    font-size: 200%;
+    letter-spacing: 10%;
+    font-family: "Open Sans", sans-serif;
+    position: absolute;
+    top: 5%;
+}
+
+/* Upper block buttons */
+.buttonsBlock {
+    width: 20%;
+    height: 40%;
+    position: absolute;
+    right: 5%;
+    bottom: 0;
+    background: #335b6b;
+    display: flex;
+}
+
+    .buttonsBlock button {
+        background: #335b6b;
+        width: 33%;
+        height: 100%;
+        border-style: none;
+        color: white;
+        font-size: 130%;
+        font-family: "Roboto", sans-serif;
+        white-space: nowrap;
+    }
+
+    .buttonsBlock form {
+        width: 33%;
+        height: 100%;
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+        border-top: 1px solid black;
+    }
+
+/*Posts block*/
+.postsBlock {
+    height: 92%;
+    width: 98%;
+    background: #d4d4d4;
+    position: absolute;
+    left: 1%;
+    bottom: 0;
+    border-radius: 3% 3% 0 0;
+}
+
+.upperPostsBlock {
+    width: 100%;
+    height: 5%;
+    position: absolute;
+    top: 0;
+    border-bottom: 2px solid black;
+}
+
+    .upperPostsBlock label {
+        font-size: 300%;
+        font-family: "Roboto", sans-serif;
+        font-weight: extra-bold;
+        position: absolute;
+        left: 44%;
+        letter-spacing: 80%;
+    }
+
+/* Post */
+.posts {
+    height: 94.7%;
+    width: 100%;
+    position: absolute;
+    top: 5.3%;
+    overflow: auto;
+}
+
+.post {
+    width: 1865px;
+    height: 600px;
+    border-bottom: 1px solid black;
+}
+/*Post account*/
+.postAccountBlock {
+    width: 100%;
+    height: 12%;
+    background: #7eb693;
+}
+
+.postAccountImage {
+    width: 5%;
+    height: 7.5%;
+    position: absolute;
+    left: 3.5%;
+}
+
+    .postAccountImage img {
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+    }
+
+.postAccountName {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 9.5%;
+}
+
+    .postAccountName label {
+        font-size: 300%;
+        font-family: "Roboto", sans-serif;
+        color: #d4d4d4;
+    }
+
+.postAccountTime {
+    width: 20%;
+    height: 7.5%;
+    margin-left: 80%;
+    margin-top: -2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .postAccountTime label {
+        font-size: 200%;
+        font-family: "Open Sans", sans-serif;
+        color: #d4d4d4;
+    }
+/*The post itself*/
+.restPost {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 55.5%;
+}
+
+.postDesc {
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+    .postDesc label {
+        color: black;
+        font-size: 250%;
+        font-family: "Open Sans", sans-serif;
+    }
+
+.postImage {
+    height: 80%;
+    width: 100%;
+}
+
+    .postImage img {
+        height: 100%;
+        width: 100%;
+    }

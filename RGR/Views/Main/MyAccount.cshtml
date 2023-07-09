@@ -1,0 +1,150 @@
+﻿@model AccountAndPostsVM
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyAccount</title>
+    <link rel="stylesheet" href="~/css/myAccount.css" asp-append-version="true">
+</head>
+<body>
+    <!--Upper block-->
+    <div class="upperBlock">
+        <!-- Logo -->
+        <div class="logoBlock">
+            <img src="~/images/Logo.png" alt="logo" class="logo" />
+            <label class="lLogo">Social Network</label>
+        </div>
+
+        <!--Buttons-->
+        <div class="buttonsBlock">
+            <form asp-action="MyAccount" asp-controller="Main" method="get"><button>My account</button></form><form asp-action="Posts" asp-controller="Main" method="get"><button>All posts</button></form><form asp-action="AllAccounts" asp-controller="Main" method="get"><button>All accounts</button></form>
+        </div>
+    </div>
+
+
+
+    <!--Account block-->
+    <div class="accountBlock">
+        <div class="accountBackground">
+            <img src="~/images/mount.jpg" alt="Mountains">
+        </div>
+        @if (Model.account.Avatarka != null&&Model.account.Avatarka.Length>0)
+        {
+            <img src="data:image/jpeg;base64,@Convert.ToBase64String(Model.account.Avatarka)" alt="avatarka" class="accountAva">
+        }
+        <div class="accountName">
+            <label>@Model.account.Nickname</label>
+        </div>
+        <div class="accountDesc">
+            <label>@Model.account.Description</label>
+        </div>
+        <div class="createPostBtn"><form asp-action="CreatePost" asp-controller="Main" method="get" asp-route-id="@Model.account.IdAccount"><button>+</button></form></div>
+        <form asp-action="EditAccount" asp-controller="Main" method="get" asp-route-id="@Model.account.IdAccount"><div class="changeBtn"><button><img src="~/images/change.png" alt="change" /></button></div></form>
+    </div>
+
+
+
+    <!--Post block-->
+    <div class="postsBlock">
+        <div class="upperPostsBlock">
+            <label>Posts</label>
+        </div>
+        <!--Posts-->
+        <div class="posts">
+            @foreach (Post post in Model.posts){
+                <!--Post-->
+                <div class="post">
+
+                    <!--Author-->
+                    <div class="postAccountBlock">
+                        <div class="postAccountImage">
+                            @if (post.IdAccountNavigation.Avatarka != null && post.IdAccountNavigation.Avatarka.Length > 0)
+                            {
+                                <img src="data:image/jpeg;base64,@Convert.ToBase64String(post.IdAccountNavigation.Avatarka)" alt="avatarka">
+                            }
+                        </div>
+                    <div class="postAccountName">
+                        <label>@post.IdAccountNavigation.Nickname</label>
+                    </div>
+                    <div class="postAccountTime">
+                        <label>@post.Time</label>
+                    </div>
+                        <!--More menu-->
+                    <img src="~/images/more.png" alt="more" class="more">
+                    <div class="moreMenu">
+                            <form asp-action="EditPost" asp-controller="Main" asp-route-id="@post.IdPost" method="get">
+                                <button>Edit</button>
+                            </form>
+                            <form asp-action="DeletePost" asp-controller="Main" asp-route-idPost="@post.IdPost" method="post"><button>Delete</button></form>
+                    </div>
+                </div>
+
+                <!--Post data-->
+                <div class="restPost">
+                    <div class="postDesc">
+                        <label>@post.Description</label>
+                    </div>
+                    <div class="postImage">
+                            @if (post.Image != null&&post.Image.Length>0){
+                                <img src="data:image/jpeg;base64,@Convert.ToBase64String(post.Image)" alt="Mountains">
+                            }
+                    </div>
+                </div>
+            </div>
+            }
+
+        </div>
+    </div>
+
+
+    <!--Scripts-->
+    <script>
+        const moreButtons = document.getElementsByClassName("more");
+        const moreMenus = document.getElementsByClassName("moreMenu");
+
+        document.addEventListener("click", function (event) {
+            const target = event.target;
+
+            // Проверяем, является ли целевой элемент .more, .moreMenu или их родительским элементом
+            let isMoreButton = false;
+            let isMoreMenu = false;
+
+            for (let i = 0; i < moreButtons.length; i++) {
+                if (target === moreButtons[i] || moreButtons[i].contains(target)) {
+                    isMoreButton = true;
+                    break;
+                }
+            }
+
+            for (let i = 0; i < moreMenus.length; i++) {
+                if (target === moreMenus[i] || moreMenus[i].contains(target)) {
+                    isMoreMenu = true;
+                    break;
+                }
+            }
+
+            // Если целевой элемент не .more, .moreMenu или их родительский элемент, устанавливаем opacity для всех .moreMenu на 0
+            if (!isMoreButton && !isMoreMenu) {
+                for (let i = 0; i < moreMenus.length; i++) {
+                    moreMenus[i].style.opacity = "0";
+                    moreMenus[i].style.pointerEvents = "none";
+                }
+            }
+        });
+
+        for (let i = 0; i < moreButtons.length; i++) {
+            const moreButton = moreButtons[i];
+            const moreMenu = moreButton.nextElementSibling;
+
+            moreButton.addEventListener("click", function (event) {
+                event.stopPropagation();
+                moreMenu.style.opacity = "1";
+                moreMenu.style.pointerEvents = "auto";
+            });
+        }
+    </script>
+</body>
+</html>
+

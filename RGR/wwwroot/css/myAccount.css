@@ -1,0 +1,304 @@
+body {
+    background: #ffffff;
+}
+
+
+
+/* Upper block */
+
+.upperBlock {
+    height: 7%;
+    width: 100%;
+    background: #335b6b;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Logo */
+.logoBlock {
+    background: #f2f3f4;
+    position: absolute;
+    top: 0;
+    left: 4%;
+    height: 100%;
+    width: 12%;
+}
+
+.logo {
+    height: 100%;
+    position: absolute;
+    left: 3%;
+}
+
+.lLogo {
+    left: 42%;
+    font-size: 200%;
+    letter-spacing: 10%;
+    font-family: "Open Sans", sans-serif;
+    position: absolute;
+    top: 5%;
+}
+
+/* Upper block buttons */
+.buttonsBlock {
+    width: 20%;
+    height: 40%;
+    position: absolute;
+    right: 5%;
+    bottom: 0;
+    background: #335b6b;
+    display: flex;
+}
+
+    .buttonsBlock button {
+        background: #335b6b;
+        width: 33%;
+        height: 100%;
+        border-style: none;
+        color: white;
+        font-size: 130%;
+        font-family: "Roboto", sans-serif;
+        white-space: nowrap;
+    }
+    .buttonsBlock form {
+        width: 33%;
+        height: 100%;
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+        border-top: 1px solid black;
+    }
+
+
+
+/* Account */
+.accountBlock {
+    width: 100%;
+    height: 40%;
+    position: absolute;
+    background: #F1EDEA;
+    top: 7%;
+    left: 0%;
+    border-bottom: 2px solid black;
+}
+
+.accountBackground {
+    width: 100%;
+    height: 70%;
+}
+
+    .accountBackground img {
+        height: 100%;
+        width: 100%;
+    }
+
+.accountAva {
+    position: absolute;
+    top: 48%;
+    left: 2%;
+    border-radius: 50%;
+    width: 15%;
+    height: 42%;
+}
+
+.accountName {
+    position: absolute;
+    left: 20%;
+    top: 70%;
+    width: 40%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+    .accountName label {
+        font-size: 300%;
+        font-family: "Roboto", sans-serif;
+        color: black;
+        white-space: nowrap;
+    }
+
+.accountDesc {
+    position: absolute;
+    bottom: 0.2%;
+    left: 19.5%;
+    width: 70%;
+    height: 20%;
+}
+
+    .accountDesc label {
+        font-size: 200%;
+        font-family: "Roboto", sans-serif;
+        color: black;
+    }
+
+.createPostBtn {
+    width: 5%;
+    height: 20%;
+    position: absolute;
+    top: 60%;
+    right: 2%;
+    background: #7eb693;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+    .createPostBtn button {
+        color: white;
+        font-size: 400%;
+        border-style: none;
+        background: #7eb693;
+    }
+
+    .changeBtn{
+        position:absolute;
+        left:50%;
+        top:70%;
+        height:10%;
+        width:5%;
+    }
+    .changeBtn img{
+        height:100%;
+        width:100%;
+    }
+    .changeBtn button{
+        border-style:none;
+        width:100%;
+        height:100%;
+    }
+
+
+/* Post */
+.posts {
+    height: 52.5%;
+    width: 100%;
+    background: #F1EDEA;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.post {
+    width: 1900px;
+    height: 600px;
+    border-bottom: 1px solid black;
+}
+
+/*Post account*/
+.postAccountBlock {
+    width: 100%;
+    height: 12%;
+    background: #7eb693;
+}
+
+.postAccountImage {
+    width: 5%;
+    height: 12.5%;
+    position: absolute;
+    left: 3.5%;
+}
+
+    .postAccountImage img {
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+    }
+
+.postAccountName {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 8.5%;
+}
+
+    .postAccountName label {
+        font-size: 300%;
+        font-family: "Roboto", sans-serif;
+        color: #d4d4d4;
+    }
+
+.postAccountTime {
+    width: 20%;
+    height: 7.5%;
+    margin-left: 78%;
+    margin-top: -2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.postAccountTime label {
+    font-size: 200%;
+    font-family: "Open Sans", sans-serif;
+    color: #d4d4d4;
+}
+
+/*More menu*/
+.more {
+    width: 5%;
+    height: 70%;
+    margin-left: 95%;
+    margin-top: -1.5%;
+}
+.moreMenu {
+    position: relative;
+    z-index: 10;
+    margin-top: 0%;
+    margin-left: 95.5%;
+    height: 160%;
+    width: 4%;
+    background: black;
+    opacity: 0;
+    pointer-events: none;
+}
+
+    .moreMenu button {
+        width: 100%;
+        height: 100%;
+        border-style: none;
+        background: black;
+        color: white;
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+    }
+
+    .moreMenu form {
+        width: 100%;
+        height: 50%;
+    }
+
+/*The post itself*/
+.restPost {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 55.5%;
+}
+
+.postDesc {
+    width: 100%;
+    height: 26%;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+    .postDesc label {
+        color: black;
+        font-size: 250%;
+        font-family: "Open Sans", sans-serif;
+    }
+
+.postImage {
+    height: 140%;
+    width: 100%;
+}
+
+    .postImage img {
+        height: 100%;
+        width: 100%;
+    }
